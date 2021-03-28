@@ -1,0 +1,26 @@
+{
+  "name": "ovo-1",
+  "version": "1.0.0",
+  "description": "Alpha Version of the OvO App",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MecBonjourno/OvO.git"
+  },
+  "author": "MecBonjourno",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MecBonjourno/OvO/issues"
+  },
+  "homepage": "https://github.com/MecBonjourno/OvO#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.12.0"
+  }
+}

@@ -32,7 +32,7 @@ const Profile = () => {
             body: JSON.stringify({
                 followId: userId,
             })
-        }).then(res=>res.json)
+        }).then(res=>res.json())
         .then(data=>{
             dispatch({type:"UPDATE", payload:{following: data.following, followers: data.followers}})
             localStorage.setItem("user", JSON.stringify(data))
@@ -59,7 +59,7 @@ const Profile = () => {
             body: JSON.stringify({
                 unfollowId: userId,
             })
-        }).then(res=>res.json)
+        }).then(res=>res.json())
         .then(data=>{
             dispatch({type:"UPDATE", payload:{following: data.following, followers: data.followers}})
             localStorage.setItem("user", JSON.stringify(data)) 

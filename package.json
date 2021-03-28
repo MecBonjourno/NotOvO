@@ -2,7 +2,7 @@
   "name": "ovo-1",
   "version": "1.0.0",
   "description": "Alpha Version of the OvO App",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "start": "node app.js",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"

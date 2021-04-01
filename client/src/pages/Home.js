@@ -15,8 +15,8 @@ const Home = () => {
         })
         .then(res=>res.json())
         .then(result => {
+            console.log(result)
            setData(result.posts)
-           console.log(result.posts)
         })
     },[])
 
@@ -28,19 +28,19 @@ const Home = () => {
                 "Authorization": "Bearer " + localStorage.getItem("jwt")
             },
             body: JSON.stringify({
-                postId: id,
+                postId:id,
             })
         }).then(res=>res.json())
         .then(result => {
             const newData = data.map(item =>{
-                if(item._id==result._id){
+                if(item._id===result._id){
                     return result
                 }else{
                     return item
                 }
             })
             setData(newData)
-            console.log(result)
+            // console.log(result)
         })
         .catch(err =>{console.log(err)});
     }
@@ -119,7 +119,7 @@ const Home = () => {
                 {data.map(item=> {
                     return (
                 <div className="card home-card #00acc1 cyan darken-1" key={item._id} >
-                <h5 className="home-card-postedBy"><Link to={item.postedBy._id !== state._id ? "/user/"+item.postedBy._id : "/profile"} style={{color: "#000!important"}}>{item.postedBy.name}</Link>
+                <h5 style={{padding:"5px"}}><Link to={item.postedBy._id !== state._id ? "/user/"+item.postedBy._id : "/profile"} style={{color: "#000!important"}}>{item.postedBy.name}</Link>
                     {item.postedBy._id === state._id &&
                     <i className="material-icons" style={{float: 'right'}} onClick={()=>DeletePost(item._id)}>delete</i>
                     }

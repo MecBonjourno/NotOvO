@@ -8,6 +8,7 @@ router.get('/allposts', requireLogin, (req, res) => {
     Post.find()
       .populate("postedBy", "_id name")
       .populate("comments.postedBy", "_id name")
+      .sort('-createdAt')
         .then(posts => {
             res.json({posts})
         })
@@ -18,6 +19,7 @@ router.get('/getfollowposts', requireLogin, (req, res) => {
     Post.find({postedBy:{$in:[req.user.following]}})
       .populate("postedBy", "_id name")
       .populate("comments.postedBy", "_id name")
+      .sort('-createdAt')
         .then(posts => {
             res.json({posts})
         })
@@ -61,7 +63,7 @@ router.put('/like', requireLogin, (req, res) => {
     Post.findByIdAndUpdate(req.body.postId, {
         $push:{likes:req.user._id}
     },{
-        new:true
+        new:true, useFindAndModify: false
     }).exec((err, result) => {
         if(err){
             return res.status(422).json({error: err})
@@ -75,7 +77,7 @@ router.put('/unlike', requireLogin, (req, res) => {
     Post.findByIdAndUpdate(req.body.postId, {
         $pull:{likes:req.user._id}
     },{
-        new:true
+        new:true, useFindAndModify: false
     }).exec((err, result) => {
         if(err){
             return res.status(422).json({error: err})

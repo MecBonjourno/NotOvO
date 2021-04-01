@@ -53,6 +53,11 @@ const Login = () => {
                         Don't have an account?
                     </Link>
                     </h6>
+                    <h6>
+                    <Link to="/reset">
+                        Forgot password?
+                    </Link>
+                    </h6>
             </div>
         </div>
       </div>

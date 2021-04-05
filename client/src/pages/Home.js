@@ -118,13 +118,14 @@ const Home = () => {
         <div>
                 {data.map(item=> {
                     return (
-                <div className="card home-card #00acc1 cyan darken-1" key={item._id} >
-                <h5 style={{padding:"5px"}}><Link to={item.postedBy._id !== state._id ? "/user/"+item.postedBy._id : "/profile"} style={{color: "#000!important"}}>{item.postedBy.name}</Link>
+                        <div className="mycard">
+                <div className="card home-card" key={item._id} >
+                <h5 style={{margin: "10px"}}><Link to={item.postedBy._id !== state._id ? "/user/"+item.postedBy._id : "/profile"} style={{color: "#000!important"}}>{item.postedBy.name}</Link>
                     {item.postedBy._id === state._id &&
-                    <i className="material-icons" style={{float: 'right'}} onClick={()=>DeletePost(item._id)}>delete</i>
+                    <i className="material-icons" style={{float: 'right', marginTop: "4px"}} onClick={()=>DeletePost(item._id)}>delete_forever</i>
                     }
                  </h5>
-                 <div className="card-image">
+                 <div style={{marginTop: "-6px"}} className="card-image">
                      <img src={item.photo} />
                  </div>
                  <div className="card-content"> 
@@ -151,7 +152,9 @@ const Home = () => {
                     <input type="text" placeholder="comenta ai" />
                  </form>
                  </div>
-            </div>)
+            </div>
+            </div>
+            )
                 })}
             
         </div>

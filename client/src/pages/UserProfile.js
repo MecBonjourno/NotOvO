@@ -80,7 +80,7 @@ const Profile = () => {
     return (
         <>
         {userProfile ? 
-        <div style={{maxWidth: "550px", margin: "0 auto"}}>
+        <div style={{maxWidth: "550px", margin: "0 auto", color: "white"}}>
             <div style={{
                 display: 'flex',
                 justifyContent: 'space-around',

@@ -56,12 +56,14 @@ const Createpost = () => {
   }
 
     return (
-      <div className="card input-field" style={{
+      <div className="card input-field " style={{
         marginTop: "15%",
         margin: "10px auto",
         maxWidth: "500px",
         padding: "20px",
-        textAlign:"center"
+        textAlign:"center",
+       backgroundColor: "#4d4d4d"
+
       }}>
           <input type="text" placeholder="title" value={title} onChange={(e)=>setTitle(e.target.value)}/>
           <input type="text" placeholder="body"value={body} onChange={(e)=>setBody(e.target.value)}/>

@@ -69,6 +69,40 @@ a {
 
 }
 
+.btn {
+    color: #FFF !important;
+}
+
 .home-card-postedBy {
     margin-left: 12px;
+}
+
+.dropped{
+    padding: 6px;
+    color: #fff;
+    /* background-color: #4d4d4d !important; */
+    border-color: #4d4d4d !important;
+}
+
+.btn-success {
+    color: #fff;
+    background-color: #4d4d4d !important;
+    border-color: #4d4d4d !important;
+}
+
+.btn-success.focus, .btn-success:focus {
+    color: #fff;
+    background-color: #4d4d4d !important;
+    border-color: #4d4d4d !important;
+    box-shadow: 0 0 0 0.2rem rgba(77,77,77,.5) !important;
+}
+
+.dropdown-menu {
+    color: #212529;
+    background-color: #4d4d4d;
+    border: 1px solid rgba(0,0,0,.15);
+}
+
+.noHover.dropdown-item{
+    background: #4d4d4d;
 }

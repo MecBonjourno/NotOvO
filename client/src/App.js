@@ -1,5 +1,6 @@
 import React, {useEffect, createContext, useReducer, useContext} from 'react'
 import Navbar from './components/Navbar'
+import NewNavbar from './components/NewNavBar'
 import './app.css'
 import {BrowserRouter, Route, Switch, useHistory} from 'react-router-dom'
 
@@ -51,7 +52,8 @@ function App() {
   return (
     <UserContext.Provider value={{state,dispatch}}>
       <BrowserRouter>
-        <Navbar />
+        {/* <Navbar /> */}
+        <NewNavbar />
         <Routing />
       </BrowserRouter>
     </UserContext.Provider>

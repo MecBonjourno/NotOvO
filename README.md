@@ -12,6 +12,7 @@ At the moment OvO is a great working and updated copy of instagram builded full 
 
 Features 100% working:
 
+ - Like and Unlike posts
  - Follow someone
  - Unfollow them
  - Post photos

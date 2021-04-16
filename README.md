@@ -2,6 +2,8 @@
 ### *Under Development by the QueRy Team and MecBonjourno
 The Public Repository for OvO, a Custom Social Network
 
+![Demo](./screen1.png)
+![Demo2](./screen2.png)
 ## OvO
 
 At the moment OvO is a great working and updated copy of instagram builded full stack with MERN Stack.
@@ -17,6 +19,8 @@ Features 100% working:
  - SignUp
  - See only followed post
  - Profile populate with data from backend
+
+    And more to come...
 
 [NotOvO](http://notovo.herokuapp.com)
 

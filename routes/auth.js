@@ -9,13 +9,6 @@ const requireLogin = require('../middleware/requireLogin')
 require('dotenv').config();
 const nodemailer = require('nodemailer')
 const senddrigtransport = require('nodemailer-sendgrid-transport')
-//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
-
-const transport = nodemailer.createTransport(senddrigtransport({
-    auth: {
-        api_key:"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"
-    }
-}))
 
 const jwtsct = process.env.JWT_SCT;
 

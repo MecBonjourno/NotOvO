@@ -9,7 +9,6 @@ const requireLogin = require('../middleware/requireLogin')
 require('dotenv').config();
 const nodemailer = require('nodemailer')
 const senddrigtransport = require('nodemailer-sendgrid-transport')
-
 const jwtsct = process.env.JWT_SCT;
 
 router.post('/signup', (req, res) => {
